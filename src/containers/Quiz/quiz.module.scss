@@ -1,0 +1,18 @@
+@import "src/assets/scss/variables";
+
+.quiz{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  flex-grow: 1;
+  width: 100%;
+  background: linear-gradient(90deg, $color-gradient-start 0%, $color-gradient-end 100%);
+
+    &__wrapper {
+      width: 600px;
+  }
+  &__title {
+    color: $color-white;
+    margin-left: 10px;
+  }
+}

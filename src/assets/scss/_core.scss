@@ -1,0 +1,21 @@
+body {
+  font: $font-size-base $font-global;
+  line-height: 1.2;
+  color: $color-black;
+}
+
+.app {
+
+  &-layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+   }
+  }
+}
+
