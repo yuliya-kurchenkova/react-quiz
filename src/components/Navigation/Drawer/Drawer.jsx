@@ -1,16 +1,26 @@
 import React, {Component} from "react";
-import classes from './Drawer.module.scss'
+import classes from './Drawer.module.scss';
+import {NavLink} from "react-router-dom";
 import Backdrop from "../../UI/Backdrop/Backdrop";
+import navList from "../../../constants/Navigation/Navigation";
 
-const links = [
-    1, 2, 3
-]
+
 class Drawer extends Component {
+    clickHandler = () => {
+        this.props.onClose()
+    }
     renderLinks() {
-        return links.map((link, index) => {
+        return navList.map((link, index) => {
             return (
                 <li key={index}>
-                    <a href="#">Link {link}</a>
+                    <NavLink
+                      to={link.route}
+                      exact={link.exact}
+                      activeClassName={classes.active}
+                      onClick={this.clickHandler}
+                    >
+                        { link.text }
+                    </NavLink>
                 </li>
             )
         })

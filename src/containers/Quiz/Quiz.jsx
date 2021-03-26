@@ -87,7 +87,11 @@ export default class Quiz extends Component {
             results: {}
         })
     }
-      render() {
+    componentDidMount() {
+        console.log('Quiz ID = ', this.props.match.params.id)
+    }
+
+    render() {
         return (
             <div className={classes.quiz}>
                 <div className={classes['quiz__wrapper']}>
